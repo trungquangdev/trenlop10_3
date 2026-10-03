@@ -13,7 +13,7 @@ public class CaSiRepository {
         }
     }
 
-    public CaSi getOne(int id){
+    public CaSi getOne(Integer id){
         try(Session s = Hibernate.getFactory().openSession()){
             return s.find(CaSi.class,id);
         }
