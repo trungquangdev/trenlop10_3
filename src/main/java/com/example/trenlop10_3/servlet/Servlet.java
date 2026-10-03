@@ -1,7 +1,9 @@
 package com.example.trenlop10_3.servlet;
 
 import com.example.trenlop10_3.entity.BaiHat;
+import com.example.trenlop10_3.entity.CaSi;
 import com.example.trenlop10_3.repository.BaiHatRepo;
+import com.example.trenlop10_3.repository.CaSiRepository;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -17,6 +19,7 @@ import java.util.List;
 })
 public class Servlet extends HttpServlet{
     private BaiHatRepo bhr= new BaiHatRepo();
+    private CaSiRepository csr = new CaSiRepository();
 
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException{
         String uri = req.getRequestURI();
@@ -36,6 +39,7 @@ public class Servlet extends HttpServlet{
 
     private void hienThiBaiHat(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         List<BaiHat> listBh = bhr.getAll();
+        List<CaSi> listCS = bhr.getAll();
         req.setAttribute("listBh",listBh);
         req.getRequestDispatcher("/bai-hat.jsp").forward(req,res);
     }

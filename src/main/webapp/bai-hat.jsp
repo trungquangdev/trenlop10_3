@@ -6,22 +6,30 @@
     <title>Title</title>
 </head>
 <body>
-    <table>
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>ten bai hat</th>
-            <th>tac gia</th>
-            <th>thoi luong</th>
-            <th>gia</th>
-            <th>phat hanh dia</th>
-            <th>ngay ra mat</th>
-        </tr>
-        </thead>
+<select>
+    <c:forEach items="${listCS}" var="cs">
+        <option ${cs.tenCaSi}>
 
-        <tbody>
-        <c:forEach items="${listBh}" var="bh">
-            <tr>
+        </option>
+    </c:forEach>
+</select>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>ten bai hat</th>
+        <th>tac gia</th>
+        <th>thoi luong</th>
+        <th>gia</th>
+        <th>phat hanh dia</th>
+        <th>ngay ra mat</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <c:forEach items="${listBh}" var="bh">
+        <tr>
             <td>${bh.id}</td>
             <td>${bh.tenBaiHat}</td>
             <td>${bh.tenTacGia}</td>
@@ -29,9 +37,10 @@
             <td>${bh.gia}</td>
             <td>${bh.phatHanhDia}</td>
             <td>${bh.ngayRaMat}</td>
-            </tr>
-        </c:forEach>
-        </tbody>
-    </table>
+            <td>${baihat.caSiId.tenCaSi}</td>
+        </tr>
+    </c:forEach>
+    </tbody>
+</table>
 </body>
 </html>
