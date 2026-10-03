@@ -6,6 +6,14 @@
     <title>Title</title>
 </head>
 <body>
+<select>
+    <c:forEach items="${listCS}" var="cs">
+        <option ${cs.tenCaSi}>
+
+        </option>
+    </c:forEach>
+</select>
+
 <table>
     <thead>
     <tr>

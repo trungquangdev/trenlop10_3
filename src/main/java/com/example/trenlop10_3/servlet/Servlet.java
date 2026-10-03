@@ -39,8 +39,8 @@ public class Servlet extends HttpServlet{
 
     private void hienThiBaiHat(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         List<BaiHat> listBh = bhr.getAll();
-        List<CaSi> listCS = bhr.getAll();
         req.setAttribute("listBh",listBh);
+        req.setAttribute("listCS",csr.getAll());
         req.getRequestDispatcher("/bai-hat.jsp").forward(req,res);
     }
 }
