@@ -20,7 +20,7 @@
         </thead>
 
         <tbody>
-        <c:forEach items="${listBh}"var="bh">
+        <c:forEach items="${listBh}" var="bh">
             <tr>
             <td>${bh.id}</td>
             <td>${bh.tenBaiHat}</td>
@@ -30,6 +30,7 @@
             <td>${bh.phatHanhDia}</td>
             <td>${bh.ngayRaMat}</td>
             </tr>
+        </c:forEach>
         </tbody>
     </table>
 </body>

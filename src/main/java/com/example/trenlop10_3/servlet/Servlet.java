@@ -12,23 +12,23 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet(name = "servlet", urlPatterns = {
-        "/cs/hien-thi",
-        "/cs/detail"
+        "/bh/hien-thi",
+        "/bh/detail"
 })
 public class Servlet extends HttpServlet{
     private BaiHatRepo bhr= new BaiHatRepo();
 
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException{
         String uri = req.getRequestURI();
-        if(uri.contains("/cs/hien-thi")){
+        if(uri.contains("/bh/hien-thi")){
             this.hienThiBaiHat(req,res);
-        }else if(uri.contains("/cs/detail")){
+        }else if(uri.contains("/bh/detail")){
             this.detailBaiHat(req,res);
         }
     }
 
     private void detailBaiHat(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        Long id = Long.valueOf(req.getParameter("id"));
+        Integer id = Integer.valueOf(req.getParameter("id"));
         BaiHat bh = bhr.getOne(id);
         req.setAttribute("bh",bh);
         this.hienThiBaiHat(req,res);

@@ -14,7 +14,7 @@ public class BaiHatRepo {
         }
     }
 
-    public BaiHat getOne(Long id){
+    public BaiHat getOne(Integer id){
         try(Session s = Hibernate.getFactory().openSession()){
             return s.find(BaiHat.class,id);
         }
