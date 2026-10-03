@@ -1,6 +1,6 @@
 package com.example.trenlop10_3.util;
 
-import com.example.trenlop10_3.entity.Test;
+import com.example.trenlop10_3.entity.CaSi;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -14,7 +14,7 @@ public class Hibernate {
     static {
         Configuration configuration = new Configuration();
         // Đăng ký Entity với Hibernate
-        configuration.addAnnotatedClass(Test.class);
+        configuration.addAnnotatedClass(CaSi.class);
         Properties properties = new Properties();
         // Cấu hình Hibernate sử dụng SQL Server
         properties.put(
