@@ -7,9 +7,9 @@ import org.hibernate.Session;
 import java.util.List;
 
 public class CaSiRepository {
-    List<CaSi> getAll(){
+    public List<CaSi> getAll(){
         try(Session s = Hibernate.getFactory().openSession()){
-            return s.createQuery("form CaSi", CaSi.class).list();
+            return s.createQuery("from CaSi", CaSi.class).list();
         }
     }
 
