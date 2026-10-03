@@ -13,15 +13,15 @@ import lombok.*;
 public class CaSi {
     @Id
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     @Column(name = "ten_ca_si")
     private String tenCaSi;
     @Column(name = "que_quan")
     private String queQuan;
-    private int tuoi;
+    private Integer tuoi;
     @Column(name = "cong_ty")
     private String congTy;
-    private int sdt;
+    private String sdt;
     @Column(name = "gioi_tinh")
-    private boolean gioiTinh;
+    private Boolean gioiTinh;
 }
