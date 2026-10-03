@@ -1,4 +1,4 @@
-package com.example.trenlop10_3.sevlet;
+package com.example.trenlop10_3.servlet;
 
 import java.io.*;
 

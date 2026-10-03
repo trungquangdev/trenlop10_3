@@ -25,13 +25,14 @@ public class BaiHat {
     private Integer thoiLuong;
     @Column(name = "ngay_san_xuat")
     private Date ngaySanXuat;
+    @Column
     private Float gia;
-    @Column(name = "ca_si_id")
-    private Integer caSiId;
     @Column(name = "phat_hanh_dia")
     private Boolean phatHanhDia;
     @Column(name = "ngay_ra_mat")
     private Date ngayRaMat;
 
-
+    @ManyToOne
+    @JoinColumn(name="ca_si_id",referencedColumnName = "id")
+    private CaSi caSiId;
 }

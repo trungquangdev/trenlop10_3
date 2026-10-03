@@ -19,7 +19,9 @@ public class CaSi {
     @Column(name = "que_quan")
     private String queQuan;
     private int tuoi;
+    @Column(name = "cong_ty")
     private String congTy;
     private int sdt;
+    @Column(name = "gioi_tinh")
     private boolean gioiTinh;
 }
